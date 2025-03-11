@@ -33,7 +33,25 @@ Dieses Repository dient dazu, CSS-Dateien für ein konsistentes Corporate Design
 5. **Vorschau aktivieren**
    - Öffne die MARP-Datei in VS Code und nutze die Vorschau (`Strg + Shift + V` oder `Cmd + Shift + V` auf macOS), um dein Theme zu testen.
   
-6. **Folientypen**
+6. **Hinweise**
+
+Der Header MUSS IMMER ausgefüllt sein, und ist wie folgt aufgebaut:
+**Name des Moduls** <br> Name des Kapitels
+
+Erklärung: Den Modulnamen immer Fett schreiben mit **; danach immer einen Zeilenumbruch mit <br> setzen.
+
+___________________
+
+AUSSERDEM: Bitte allgemein in den Slides auf sinnvolle und schöne (nicht nur ein Wort in einer Zeile) Zeilenumbrüch achten.
+Die Umbrüche kann man mit <br> selbst bestimmen. 
+
+__________________
+
+Wie verwendet man Markdown? Hier sind alle styles erklärt:
+https://www.markdownguide.org/cheat-sheet/
+
+  
+7. **Folientypen**
 
    Folgende Arten von Folien können verwendet werden:
 
