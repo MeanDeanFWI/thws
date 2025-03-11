@@ -36,16 +36,15 @@ Dieses Repository dient dazu, CSS-Dateien für ein konsistentes Corporate Design
 6. **Folientypen**
 
    Folgende Arten von Folien können verwendet werden:
-
-   | **Sektion**            | **MARP-Klassenbefehl**        |
-|------------------------|------------------------------|
-| Allgemeine Inhaltsfolie | `<!-- class: default -->`    |
-| Titelseite             | `<!-- class: titlepage -->`  |
-| Lernziele              | `<!-- class: lernziele -->`  |
-| Diskussion             | `<!-- class: diskussion -->` |
-| Zusammenfassung        | `<!-- class: summary -->`    |
-| Zitat-Bereich         | `<!-- class: quote -->`      |
-| Grafik-Bereich        | `<!-- class: grafik -->`     |
-| Vollbild-Grafik       | `<!-- class: vollbild -->`   |
-| Tabellen              | `<!-- class: table -->`      |
+| **Sektion**            | **MARP-Klassenbefehl**          |
+|------------------------|--------------------------------|
+| Allgemeine Inhaltsfolie | ``<!-- class: default -->``    |
+| Titelseite             | ``<!-- class: titlepage -->``  |
+| Lernziele              | ``<!-- class: lernziele -->``  |
+| Diskussion             | ``<!-- class: diskussion -->`` |
+| Zusammenfassung        | ``<!-- class: summary -->``    |
+| Zitat-Bereich         | ``<!-- class: quote -->``      |
+| Grafik-Bereich        | ``<!-- class: grafik -->``     |
+| Vollbild-Grafik       | ``<!-- class: vollbild -->``   |
+| Tabellen              | ``<!-- class: table -->``      |
 
