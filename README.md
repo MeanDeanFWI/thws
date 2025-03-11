@@ -2,18 +2,6 @@
 
 Dieses Repository dient dazu, CSS-Dateien für ein konsistentes Corporate Design (CI) in [MARP](https://marp.app/) zu testen und zu entwickeln. MARP ist ein Markdown-basiertes Präsentationstool, das es ermöglicht, eigene Themes zu verwenden.
 
-## Installation
-
-Um eine der CSS-Dateien aus diesem Repository zu verwenden, kann sie direkt per RAW-Link eingebunden werden. Beispiel:
-
-```yaml
----
-theme: 'https://raw.githubusercontent.com/<USERNAME>/<REPO-NAME>/main/<THEME-FILE>.css'
----
-```
-
-**Hinweis:** Ersetze `<USERNAME>`, `<REPO-NAME>` und `<THEME-FILE>.css` mit den entsprechenden Werten aus deinem Repository.
-
 ## Anleitung zur Installation eines Custom Themes in MARP für VS Code
 
 1. **MARP for VS Code installieren**
@@ -28,7 +16,7 @@ theme: 'https://raw.githubusercontent.com/<USERNAME>/<REPO-NAME>/main/<THEME-FIL
      ```json
      {
        "markdown.marp.themes": [
-         "https://raw.githubusercontent.com/<USERNAME>/<REPO-NAME>/main/<THEME-FILE>.css"
+         "https://raw.githubusercontent.com/MeanDeanFWI/thws/refs/heads/main/thws.css"
        ]
      }
      ```
@@ -44,4 +32,20 @@ theme: 'https://raw.githubusercontent.com/<USERNAME>/<REPO-NAME>/main/<THEME-FIL
 
 5. **Vorschau aktivieren**
    - Öffne die MARP-Datei in VS Code und nutze die Vorschau (`Strg + Shift + V` oder `Cmd + Shift + V` auf macOS), um dein Theme zu testen.
+  
+6. **Folientypen**
+
+   Folgende Arten von Folien können verwendet werden:
+
+   | **Sektion**            | **MARP-Klassenbefehl**        |
+|------------------------|------------------------------|
+| Allgemeine Inhaltsfolie | `<!-- class: default -->`    |
+| Titelseite             | `<!-- class: titlepage -->`  |
+| Lernziele              | `<!-- class: lernziele -->`  |
+| Diskussion             | `<!-- class: diskussion -->` |
+| Zusammenfassung        | `<!-- class: summary -->`    |
+| Zitat-Bereich         | `<!-- class: quote -->`      |
+| Grafik-Bereich        | `<!-- class: grafik -->`     |
+| Vollbild-Grafik       | `<!-- class: vollbild -->`   |
+| Tabellen              | `<!-- class: table -->`      |
 
