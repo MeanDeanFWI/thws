@@ -36,14 +36,14 @@ Dieses Repository dient dazu, CSS-Dateien für ein konsistentes Corporate Design
 6. **Hinweise**
 
 Der Header MUSS IMMER ausgefüllt sein, und ist wie folgt aufgebaut:
-**Name des Moduls** <br> Name des Kapitels
+&lt; **Name des Moduls** <br> Name des Kapitels &gt
 
-Erklärung: Den Modulnamen immer Fett schreiben mit **; danach immer einen Zeilenumbruch mit <br> setzen.
+&lt; Erklärung: Den Modulnamen immer Fett schreiben mit **; danach immer einen Zeilenumbruch mit <br> setzen. &gt
 
 ___________________
 
 AUSSERDEM: Bitte allgemein in den Slides auf sinnvolle und schöne (nicht nur ein Wort in einer Zeile) Zeilenumbrüch achten.
-Die Umbrüche kann man mit <br> selbst bestimmen. 
+&lt; Die Umbrüche kann man mit <br> selbst bestimmen. &gt
 
 __________________
 
