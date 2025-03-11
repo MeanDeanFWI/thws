@@ -1,0 +1,132 @@
+---
+marp: true
+theme: thws
+paginate: true
+header: '**Strategies and technologies for climate change Mitigation** <br> Impairment Test nach IAS 36'
+
+---
+
+<!-- 
+Der Header MUSS IMMER ausgefüllt sein, und ist wie folgt aufgebaut:
+**Name des Moduls** <br> Name des Kapitels
+
+Erklärung: Den Modulnamen immer Fett schreiben mit **; danach immer einen Zeilenumbruch mit <br> setzen.
+
+___________________
+
+AUSSERDEM: Bitte allgemein in den Slides auf sinnvolle und schöne (nicht nur ein Wort in einer Zeile) Zeilenumbrüch achten.
+Die Umbrüche kann man mit <br> selbst bestimmen. 
+
+__________________
+
+Wie verwendet man Markdown? Hier sind alle styles erklärt:
+https://www.markdownguide.org/cheat-sheet/
+
+-->
+
+<!-- _class: titlepage -->
+
+# Impairment Test <br> nach IAS 36
+## Beurteilung der Werthaltigkeit <br> von Vermögenswerten
+
+---
+
+<!-- _class: lernziele -->
+
+# Lernziele
+- Definition und Zweck des Impairment Tests
+- Anwendungsbereich∞ von IAS 36
+- Ablauf der Werthaltigkeitsprüfung
+- Ermittlung des erzielbaren Betrags
+- Behandlung von Wertminderungen
+- Praxisbeispiele zur Veranschaulichung
+
+---
+
+# Einführung in IAS 36
+- Ziel: Sicherstellung, dass Vermögenswerte nicht über ihrem erzielbaren Betrag bilanziert werden
+- Gilt für Sachanlagen, immaterielle Vermögenswerte und Geschäfts- oder Firmenwerte
+- Nicht anwendbar auf Vorräte, latente Steuern, Finanzinstrumente (separate Standards)
+
+---
+
+<!-- _class: quote -->
+
+>»Abgeschieden wohnen sie in Buchstabhausen an der Küste <br> des Semantik, eines großen Sprachozeans.«
+
+## Max Mustermann, 2025
+
+---
+
+<!-- _class: grafik -->
+
+# Grafik mit Überschrift
+
+![Image](img/grafik-beispiel.jpg)
+
+### **Das ist die Bildunterschrift** <br> © Das ist das Copyright
+
+---
+
+<!-- _class: vollbild -->
+
+![Image](img/beispielbild.jpg)
+
+### **Das ist die Bildunterschrift** <br> © Das ist das Copyright
+---
+
+## Das ist eine Tabelle
+
+| ID | Syntax | Description | Another Category |
+| --- | --- | --- | --- |
+| 1 | Header | Title | Value Number 1|
+| 2 | Paragraph | Text | Second Value |
+| 3 | Quote | Text |  Value 3 |
+| 4 | Link | URL | 4th Value |
+
+---
+
+# Anwendungsbereich
+- Betrifft materielle und immaterielle Vermögenswerte
+- Gilt insbesondere für:
+  - Sachanlagen nach IAS 16
+  - Immaterielle Vermögenswerte nach IAS 38
+  - Geschäfts- oder Firmenwerte nach IFRS 3
+- Ausschluss von Finanzinstrumenten (IFRS 9) und biologischen Vermögenswerten (IAS 41)
+
+---
+
+# Erzielbarer Betrag
+- Höherer Wert aus:
+  1. **Fair Value abzüglich Verkaufskosten**
+  2. **Nutzungswert** (Value in Use)
+- Fair Value: Marktbasierte Bewertung
+- Nutzungswert: Barwert der erwarteten zukünftigen Cashflows
+
+
+---
+
+# Zusammenhang mit anderen IFRS-Standards
+- **IAS 16**: Neubewertungsmodell
+- **IAS 38**: Behandlung immaterieller Vermögenswerte
+- **IFRS 13**: Fair-Value-Bewertung
+- **IFRS 9**: Wertminderung von Finanzinstrumenten
+
+
+---
+<!-- _class: summary -->
+
+# Summary
+- IAS 36 stellt sicher, dass Vermögenswerte nicht <br> überbewertet sind
+- Regelmäßige Prüfung erforderlich, insbesondere bei Indikatoren für Wertminderung
+- Ermittlung des erzielbaren Betrags als Kernprozess
+- Praxisbeispiele zeigen hohe Relevanz für Unternehmen
+
+---
+
+<!-- _class: diskussion -->
+
+# Fragen & Diskussion
+- Welche Herausforderungen seht ihr bei der Anwendung <br> von IAS 36?
+- Welche Branchen sind besonders betroffen?
+- Welche Alternativen gäbe es zur aktuellen Regelung?

@@ -1,0 +1,326 @@
+/* @theme thws */
+
+/* Standard-Marp-Stile importieren */
+@import "default";
+
+/* Schriftart Inter importieren */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* -------------------- ROOT STYLES -------------------------------*/
+
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+
+  /* Farben */
+  --background-color: #ffffff;
+  --header-color: #FF6600; /* Orange für h1 */
+  --subheader-color: #000000; /* Schwarz für h2 */
+  --text-color: #000000; /* Schwarz für Fließtext */
+  --list-color: #FF6600; /* Orange für Listenpunkte & Nummerierungen */
+  --quote-color: #FF6600; /* Orange für Zitate */
+  --page-number-color: #CDCDCD; /* Orange für Foliennummern */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: right;
+  position: absolute;
+  z-index: 1;
+  top:45px;
+  right: 40px;
+  color: #CDCDCD !important;
+}
+
+section {
+  padding-left: 100px;
+}
+
+
+
+/* -------------------- ALLGEMEINE STRUKTUR -------------------------------*/
+
+/* Standardmäßig ist jede Folie eine Inhaltsfolie */
+section {
+  background-color: var(--background-color);
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* LOGO OBEN LINKS */
+section::before {
+  content: "";
+  background: url("img/thws-logo_horiz_en_orange-rgb.svg") no-repeat center;
+  background-size: 440px 70px;
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 0px;
+  width: 440px;
+  height: 70px;
+}
+
+section h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  width: 700px;
+}
+
+
+section h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  color: var(--subheader-color); /* Schwarz */
+  width: 700px;
+}
+
+section h1, section h2, section p, section h3, section ul, section ol {
+  width: 650px;
+}
+
+/* -------------------- TITELSEITE -------------------------------*/
+
+section.titlepage {
+  text-align: left;
+  background-color: #1C2058;
+}
+
+/* H1 Titel auf Titelseite */
+section.titlepage h1 {
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--header-color);
+  width: 650px;
+}
+
+/* H2 Untertitel auf Titelseite */
+section.titlepage h2 {
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  line-height: 1.1;
+  width: 650px;
+}
+
+/* -------------------- Lernziele & Diskussion & Summary -------------------------------*/
+
+section.lernziele, section.diskussion {
+  background-color: #1C2058;
+}
+
+section.lernziele h2, section.lernziele p, section.lernziele h3, section.lernziele ul li {
+  color: white;
+}
+
+section.diskussion h2, section.diskussion p, section.diskussion h3, section.diskussion ul li {
+  color: white;
+}
+
+section.lernziele h1, section.diskussion h1, section.summary h1 {
+  color: #FF6600;
+  font-size: 42px;
+}
+
+
+
+/* -------------------- TEXT & LISTEN -------------------------------*/
+
+/* Fließtext bündig mit Aufzählungszeichen */
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: var(--text-color); /* Schwarz */
+  word-wrap: break-word; /* Falls nötig, Text umbrechen */
+}
+
+
+/* Listenpunkte & Nummerierungen */
+ul, ol {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  margin-left: -12px;
+  word-wrap: break-word; /* Falls nötig, Text umbrechen */
+  list-style-position: inside; /* Punkte bleiben außerhalb */
+}
+
+ol {
+  list-style-type: decimal !important;
+}
+
+/* Listeneinträge mit hängendem Einzug */
+ul li, ol li {
+  color: var(--text-color); /* Text bleibt schwarz */
+  text-indent: -34px; /* Umbruch unter das erste Wort setzen */
+}
+
+/* Orange Aufzählungszeichen */
+ul li::marker, ol li::marker {
+  color: var(--list-color);
+  font-weight: light;
+}
+
+ul li ul li {
+  position: relative;
+  list-style-type: none;
+  padding-left: 24px;
+}
+
+ul li ul li:before {
+  content: "➔";
+  position: absolute;
+  top: 2px;
+  left: -2px;
+  color:#FF6600;
+  font-size: 20px;
+} 
+
+/* -------------------- ZITATE -------------------------------*/
+
+section.quote 
+{
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+blockquote {
+  border: none;
+  padding: 0;
+  width: 550px;
+}
+
+blockquote p {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.4;
+  color: var(--quote-color); /* Orange */
+  width: auto;
+  
+}
+
+/* -------------------- Grafik-------------------------------*/
+
+section.grafik h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  position: absolute;
+  top: 130px;
+}
+
+section.grafik h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: black !important;
+  position: absolute;
+  bottom:50px;
+}
+
+section.grafik h3 strong{
+  font-weight: 600;
+  color: black;
+}
+
+/* Bild-Box */
+section.grafik img {
+  max-width: 750px;
+  max-height: 400px;
+  position: absolute;
+  top: 180px;
+ 
+}
+
+/* -------------------- Vollbild-------------------------------*/
+
+section.vollbild h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: black !important;
+  padding: 15px 30px;
+  background-color: white;
+  border-radius: 12px;
+  position: absolute;
+  bottom:50px;
+}
+
+section.vollbild h3 strong{
+  font-weight: 600;
+  color: black;
+}
+
+
+/* Bild-Box */
+section.vollbild img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+ 
+}
+
+
+/* -------------------- Tabelle-------------------------------*/
+
+table {
+  font-size: 24px;
+}
+
+th, td {
+  padding: 7px 15px !important;
+}
+
+th {
+  text-align: left;
+  background-color: #FF6600;
+  border: white 1px solid !important;
+  color: white;
+}
+
+td {
+  border: white 1px solid !important;
+}
+
+tr:nth-child(even) {background-color: #f0f0f0 !important;}
+
+/* -------------------- FOOTER AUTOMATISCH ORANGE -------------------------------*/
+
+/* Footer-Bereich mit Text */
+footer {
+  position: absolute;
+  bottom: 0.2cm;
+  left: 2.33cm;
+  font-family: InterFont, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--footer-color) !important; /* Footer-Text 100% Orange */
+}
+
+/* Seitenzahl unten rechts */
+section::after {
+  content: counter(section);
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-family: InterFont, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--page-number-color) !important; /* Jetzt garantiert Orange */
+}
