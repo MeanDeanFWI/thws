@@ -35,16 +35,16 @@ Dieses Repository dient dazu, CSS-Dateien für ein konsistentes Corporate Design
   
 6. **Hinweise**
 
-Der Header MUSS IMMER ausgefüllt sein, und ist wie folgt aufgebaut:
-&lt; **Name des Moduls** <br> Name des Kapitels &gt;
+Der Header **MUSS IMMER** ausgefüllt sein, und ist wie folgt aufgebaut:  
+&lt; **Name des Moduls** <br> Name des Kapitels &gt;  
 
-&lt; Erklärung: Den Modulnamen immer Fett schreiben mit **; danach immer einen Zeilenumbruch mit <br> setzen. &gt;
+&lt; **Erklärung:** Den Modulnamen immer **fett** schreiben mit `**`; danach immer einen Zeilenumbruch mit `<br>` setzen. &gt;  
 
-___________________
+---
 
-AUSSERDEM: Bitte allgemein in den Slides auf sinnvolle und schöne (nicht nur ein Wort in einer Zeile) Zeilenumbrüch achten.
-&lt; Die Umbrüche kann man mit <br> selbst bestimmen. &gt;
-
+### AUSSERDEM:  
+Bitte allgemein in den Slides auf **sinnvolle und schöne** (nicht nur ein Wort in einer Zeile) Zeilenumbrüche achten.  
+&lt; Die Umbrüche kann man mit `<br>` selbst bestimmen. &gt;
 __________________
 
 Wie verwendet man Markdown? Hier sind alle styles erklärt:
