@@ -40,6 +40,11 @@ Der Header **MUSS IMMER** ausgefüllt sein, und ist wie folgt aufgebaut:
 
 &lt; **Erklärung:** Den Modulnamen immer **fett** schreiben mit `**`; danach immer einen Zeilenumbruch mit `<br>` setzen. &gt;  
 
+7. **Verfügbare Theme**
+
+Für online Vorlesungen kann das Theme "thws.css" verwendet werden, hier ist die Folienbreite auf 70% reduziert,, um Platz für den Spreche zu bieten.
+
+"Normale Vorlesungen können mit dem Theme "thws-pr.css" gestaltet werden, hier sind die Folien auf 100% Breite ausgelegt.
 ---
 
 ### AUSSERDEM:  
