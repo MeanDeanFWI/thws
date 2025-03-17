@@ -1,0 +1,46 @@
+/* @theme thws-pr */
+
+@import "thws";
+
+/* -------------------- ALLGEMEINE STRUKTUR -------------------------------*/
+
+/* Standardmäßig ist jede Folie eine Inhaltsfolie */
+section {
+  background-color: var(--background-color);
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* LOGO OBEN LINKS */
+section::before {
+  content: "";
+  background: url("https://raw.githubusercontent.com/MeanDeanFWI/thws/refs/heads/main/logos/thws-logo_horiz_en_orange-rgb.svg") no-repeat center;
+  background-size: 440px 70px;
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 0px;
+  width: 440px;
+  height: 70px;
+}
+
+section h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  width: 700px;
+}
+
+
+section h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  color: var(--subheader-color); /* Schwarz */
+  width: 700px;
+}
+
+section h1, section h2, section p, section h3, section ul, section ol {
+  width: 100%;
+}
