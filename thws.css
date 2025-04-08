@@ -19,11 +19,11 @@
   --background-color: #ffffff;
   --background-grey: #343A40;
   --background-teal: #005564;
-  --header-color: #FF66a0; /* Orange für h1 */
+  --header-color: #FF6a00; /* Orange für h1 */
   --subheader-color: #000000; /* Schwarz für h2 */
   --text-color: #000000; /* Schwarz für Fließtext */
-  --list-color: #FF66a0; /* Orange für Listenpunkte & Nummerierungen */
-  --quote-color: #FF66a0; /* Orange für Zitate */
+  --list-color: #FF6a00; /* Orange für Listenpunkte & Nummerierungen */
+  --quote-color: #FF6a00; /* Orange für Zitate */
   --page-number-color: #CDCDCD; /* Orange für Foliennummern */
   --tiny: 18px;
   --small: 22px;
@@ -237,7 +237,7 @@ ul li ul li:before {
   position: absolute;
   top: 2px;
   left: -2px;
-  color:#FF6600;
+  color:#FF6a00;
   font-size: 20px;
 } 
 
@@ -260,7 +260,7 @@ th, td {
 
 th {
   text-align: left;
-  background-color: #FF6600;
+  background-color: #FF6a00;
   border: white 1px solid !important;
   color: white;
 }
@@ -336,7 +336,7 @@ section.structural h2, section.structural p, section.structural h1, section.stru
 }
 
 section.structural h1 {
-  color: #FF66a0;
+  color: #FF6a00;
   font-size: 32px;
 }
 
