@@ -1,4 +1,5 @@
 /* @theme thws */
+/*version: 1.0*/
 
 /* Standard-Marp-Stile importieren */
 @import "default";
@@ -12,37 +13,45 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
+  box-sizing: border-box;
 
   /* Farben */
   --background-color: #ffffff;
+  --background-grey: #343A40;
+  --background-teal: #005564;
   --header-color: #FF6600; /* Orange für h1 */
   --subheader-color: #000000; /* Schwarz für h2 */
   --text-color: #000000; /* Schwarz für Fließtext */
   --list-color: #FF6600; /* Orange für Listenpunkte & Nummerierungen */
   --quote-color: #FF6600; /* Orange für Zitate */
   --page-number-color: #CDCDCD; /* Orange für Foliennummern */
+  --tiny: 18px;
+  --small: 22px;
+  --default: 24px;
+  --large: 28px;
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  position: relative;
 }
 
 header {
   font-size: 14px;
   line-height: 1.2;
-  text-align: right;
-  position: absolute;
-  z-index: 1;
-  top:45px;
-  right: 40px;
+  text-align: left;
   color: #CDCDCD !important;
+  justify-self: right;
+  width: fit-content;
+  right: 60px;
+  top: 50px;
+  display: none;
 }
 
 section {
   padding-left: 100px;
 }
-
 
 
 /* -------------------- ALLGEMEINE STRUKTUR -------------------------------*/
@@ -51,14 +60,33 @@ section {
 section {
   background-color: var(--background-color);
   position: relative;
-  width: 100%;
-  height: 100%;
+  height: 720px;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 150px;
+  padding-bottom: 80px;
 }
+
+section.center {
+  padding-top: 100px;
+  justify-content: center !important;
+}
+
+section.end 
+{
+  justify-content: end !important;
+}
+
+
+section > p, ul, ol, table, a {
+  overflow: hidden;
+}
+
 
 /* LOGO OBEN LINKS */
 section::before {
   content: "";
-  background: url("https://raw.githubusercontent.com/MeanDeanFWI/thws/refs/heads/main/logos/thws-logo_horiz_en_orange-rgb.svg") no-repeat center;
+  background: url("img/thws-logo_horiz_en_orange-rgb.svg") no-repeat center;
   background-size: 440px 70px;
   position: absolute;
   z-index: 1;
@@ -68,82 +96,108 @@ section::before {
   height: 70px;
 }
 
+section h1, section h2, section p, section h3, section ul, section ol, section table, section pre {
+  width: 650px;
+}
+
+
+/*p:first-of-type, ul:first-of-type, ol:first-of-type, table:first-of-type, pre:first-of-type {
+  margin-top: 15px;
+}*/
+
+h1 + p, h1 + ul,  h1 + ol, h1 + table,  h1 + pre, h1 + strong {margin-top: 15px;}
+h2 + p, h2 + ul,  h2 + ol, h2 + table,  h2 + pre, h2 + strong {margin-top: 15px;}
+h3 + p, h3 + ul,  h3 + ol, h3 + table,  h3 + pre, h3 + strong {margin-top: 15px;}
+h4 + p, h4 + ul,  h4 + ol, h4 + table,  h4 + pre, h4 + strong {margin-top: 15px;}
+
+
+
+/* -------------------- Überschriften und Text-------------------------------*/
+
+
+/*-- Überschriften --*/
 section h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: black;
-  width: 700px;
+  line-height: 1 !important;
 }
-
 
 section h2 {
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: 500;
   color: var(--subheader-color); /* Schwarz */
-  width: 700px;
 }
 
-section h1, section h2, section p, section h3, section ul, section ol {
-  width: 650px;
-}
-
-/* -------------------- TITELSEITE -------------------------------*/
-
-section.titlepage {
-  text-align: left;
-  background-color: #1C2058;
-}
-
-/* H1 Titel auf Titelseite */
-section.titlepage h1 {
-  font-size: 58px;
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--header-color);
-  width: 650px;
-}
-
-/* H2 Untertitel auf Titelseite */
-section.titlepage h2 {
-  font-size: 40px;
-  font-weight: 300;
-  color: white;
-  line-height: 1.1;
-  width: 650px;
-}
-
-/* -------------------- Lernziele & Diskussion & Summary -------------------------------*/
-
-section.lernziele, section.diskussion {
-  background-color: #1C2058;
-}
-
-section.lernziele h2, section.lernziele p, section.lernziele h3, section.lernziele ul li {
-  color: white;
-}
-
-section.diskussion h2, section.diskussion p, section.diskussion h3, section.diskussion ul li {
-  color: white;
-}
-
-section.lernziele h1, section.diskussion h1, section.summary h1 {
-  color: #FF6600;
-  font-size: 42px;
-}
-
-
-
-/* -------------------- TEXT & LISTEN -------------------------------*/
-
-/* Fließtext bündig mit Aufzählungszeichen */
-p {
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
+section h3 {
   font-size: 24px;
+  font-weight: 500;
+  color: var(--header-color);
+}
+
+section h4 {
+  font-size: var(--default);
+  font-size: 24px;
+  font-weight: 500;
+  color: #6d6d6d;
+}
+
+section h5 {
+  font-size: var(--tiny);
+  font-weight: 300;
+  color: var(--subheader-color);
+}
+
+section h6 {
+  font-size: var(--tiny);
+  font-weight: 300;
+  color: var(--header-color);
+}
+
+section h1 strong, section h2 strong, section h5 strong {
+  font-weight: 700;
+  color: var(--subheader-color);
+}
+
+section h3 strong, section h6 strong {
+  font-weight: 700;
+  color: var(--header-color);
+}
+
+section h4 strong {
+  font-weight: 700;
+  color: #6d6d6d;
+}
+
+
+section h1 , section h2 , section h3 , section h4 , section h5 , section h6 {
+  margin: 3px 0 !important;
+}
+
+
+
+p {
+  font-weight: 300;
+  font-size: var(--default);
   color: var(--text-color); /* Schwarz */
   word-wrap: break-word; /* Falls nötig, Text umbrechen */
 }
+
+
+section a {
+  color: var(--header-color);
+  text-decoration: underline;
+}
+
+/* ---------------------------Text Sizing ------------------*/
+
+section.tiny-text p, section.tiny-text ul li, section.tiny-text ol li, section.tiny-text a, section.tiny-text table {font-size: var(--tiny);}
+section.small-text p, section.small-text ul li, section.small-text ol li, section.small-text a {font-size: var(--small);}
+section.large-text p, section.large-text ul li, section.large-text ol li, section.large-text a {font-size: var(--large);}
+section.large-text h1, section.large-text h2 {font-size: 46px !important;}
+
+/* -------------------- LISTS -------------------------------*/
+
 
 
 /* Listenpunkte & Nummerierungen */
@@ -187,13 +241,122 @@ ul li ul li:before {
   font-size: 20px;
 } 
 
-/* -------------------- ZITATE -------------------------------*/
+/* -------------------- Images-------------------------------*/
 
-section.quote 
-{
-  flex-wrap: wrap;
-  align-content: flex-end;
+section img {
+  max-height: 450px;
 }
+
+/* -------------------- Table-------------------------------*/
+
+table {
+  font-size: var(--small);
+  border: none;
+}
+
+th, td {
+  padding: 7px 15px !important;
+}
+
+th {
+  text-align: left;
+  background-color: #FF6600;
+  border: white 1px solid !important;
+  color: white;
+}
+
+td, tr {
+  border: white 1px solid !important;
+}
+
+tr {color: black; background-color: white !important;}
+tr:nth-child(even) {background-color: #f0f0f0 !important;}
+
+
+/* -------------------- CLASS: TITELSEITE -------------------------------*/
+
+section.titlepage header {display:block;}
+
+section.titlepage {
+  text-align: left;
+  background-color: var(--background-teal);
+  justify-content: center;
+  padding-top: 50px;
+}
+
+
+/* H1 Titel auf Titelseite */
+section.titlepage h1 {
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--header-color);
+  width: 650px;
+}
+
+/* H2 Untertitel auf Titelseite */
+section.titlepage h2 {
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  line-height: 1.1;
+  width: 650px;
+}
+
+section.titlepage h1 strong {
+  font-weight: 700;
+  color: var(--header-color);
+}
+
+section.titlepage h2 strong, section.titlepage h4 strong, section.titlepage h5 strong, section.titlepage h6 strong{
+  font-weight: 700;
+  color: white;
+}
+
+section.titlepage h4, section.titlepage h5, section.titlepage p, section.titlepage ul li, section.titlepage ol li {
+  color: white;
+}
+
+section.titlepage th { color: black; }
+section.titlepage tr {color: white; background-color: #1C2058 !important;}
+section.titlepage tr:nth-child(even) {background-color: #0e1030!important;}
+
+
+/* -------------------- CLASSES: structural -------------------------------*/
+
+
+section.structural header {display:block;}
+
+section.structural {
+  background-color: var(--background-grey);
+}
+
+section.structural h2, section.structural p, section.structural h1, section.structural h5, section.structural ul li, section.structural ol li {
+  color: white;
+}
+
+section.structural h1 {
+  color: #FF6600;
+  font-size: 32px;
+}
+
+section.structural h1 strong, section.structural h6 strong{
+  font-weight: 700;
+  color: var(--header-color);
+}
+
+section.structural h2 strong, section.structural h5 strong {
+  font-weight: 700;
+  color: white;
+}
+
+section.structural th { color: black; }
+section.structural tr {color: white; background-color: #2b2b2b;}
+section.structural tr:nth-child(even) {background-color: #181818;}
+
+
+/* -------------------- CLASS: QUOTE -------------------------------*/
+
 
 blockquote {
   border: none;
@@ -210,117 +373,92 @@ blockquote p {
   
 }
 
-/* -------------------- Grafik-------------------------------*/
 
-section.grafik h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  color: black;
-  position: absolute;
-  top: 130px;
+/* -------------------- CLASS: Fullscreen -------------------------------*/
+
+section.fullscreen {
+  justify-content: end;
 }
 
-section.grafik h3 {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  color: black !important;
-  position: absolute;
-  bottom:50px;
+section.fullscreen::before {
+  display: none;
 }
 
-section.grafik h3 strong{
-  font-weight: 600;
-  color: black;
+section.fullscreen::after {
+  display: none;
 }
 
-/* Bild-Box */
-section.grafik img {
-  max-width: 750px;
-  max-height: 400px;
-  position: absolute;
-  top: 180px;
- 
-}
-
-/* -------------------- Vollbild-------------------------------*/
-
-section.vollbild h3 {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  color: black !important;
-  padding: 15px 30px;
+section.fullscreen h5, section.fullscreen h6 {
+  padding: 10px 20px;
   background-color: white;
   border-radius: 12px;
-  position: absolute;
-  bottom:50px;
+  width: fit-content;
+  max-width: 650px;
+  position: relative;
 }
-
-section.vollbild h3 strong{
-  font-weight: 600;
-  color: black;
-}
-
 
 /* Bild-Box */
-section.vollbild img {
-  width: 100%;
+section.fullscreen img {
+  width:100%;
   height: auto;
+  max-height: none;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
- 
 }
 
+/* -------------------- CLASS: img-right-------------------------------*/
 
-/* -------------------- Tabelle-------------------------------*/
-
-table {
-  font-size: 24px;
+section.img-right {
+  width: 50%;
+  overflow: visible;
 }
 
-th, td {
-  padding: 7px 15px !important;
+section.img-right::after {
+  display: none;
 }
 
-th {
-  text-align: left;
-  background-color: #FF6600;
-  border: white 1px solid !important;
-  color: white;
+section.img-right img{
+  min-height: 100%;
+  max-height: auto;
+  width: 100%;
+  position: absolute;
+  right: -100%;
+  bottom: 0;
+  z-index: 0;
+  object-fit: cover;
 }
 
-td {
-  border: white 1px solid !important;
+section.img-right h1, section.img-right h2, section.img-right p, section.img-right h3, section.img-right ul, section.img-right ol, section.img-right table, section.img-right pre {
+  width: 500px;
 }
 
-tr:nth-child(even) {background-color: #f0f0f0 !important;}
+section.img-right h5, section.img-right h6 {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 12px;
+  bottom: 70px;
+  width: fit-content;
+  max-width: 720px;
+  position: absolute;
+  right: -200px;
+  
+}
+
 
 /* -------------------- FOOTER AUTOMATISCH ORANGE -------------------------------*/
-
-/* Footer-Bereich mit Text */
-footer {
-  position: absolute;
-  bottom: 0.2cm;
-  left: 2.33cm;
-  font-family: InterFont, sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--footer-color) !important; /* Footer-Text 100% Orange */
-}
 
 /* Seitenzahl unten rechts */
 section::after {
   content: counter(section);
   position: absolute;
-  bottom: 40px;
-  right: 40px;
+  right: 0;
+  padding: 60px;
   font-family: InterFont, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
-  color: var(--page-number-color) !important; /* Jetzt garantiert Orange */
+  text-align: right;
+  color: var(--page-number-color) !important;
 }
