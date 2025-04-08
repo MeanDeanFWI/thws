@@ -2,7 +2,7 @@
 
 Willkommen zum **Custom Marp Theme "thws.css"**, speziell entwickelt für Präsentationen im Stil der Technischen Hochschule Würzburg-Schweinfurt.
 
-Das Theem thws.css ist für online Präsentationen optimiert, für Veranstaltungen in Präsenz steht das Theme thws-pr zu Verfügung, das die volle Folienbreite nutzt. Einfach zu erkennen welches Theme genutzt wird ist durch die Titelfolie, bei online ist dieser in einem Petrolton, bei Präsenz in Dunkelblau.
+Das Theme thws.css ist für online Präsentationen optimiert, für Veranstaltungen in Präsenz steht das Theme thws-pr.css zu Verfügung, das die volle Folienbreite nutzt. Einfach zu erkennen welches Theme genutzt wird ist durch die Titelfolie, bei online ist diese in einem Petrolton, bei Präsenz in Dunkelblau.
 
 Die PDF Datei zeigt, wie das Theme verwendet werden kann.
 
