@@ -1,7 +1,7 @@
 /* @theme thws-pr */
 /*version: 1.0*/
 
-@import "default";
+@import "thws";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
@@ -13,11 +13,11 @@
   --background-color: #ffffff;
   --background-grey: #343A40;
   --background-teal: #003366;
-  --header-color: #FF6600;
+  --header-color: #FF6a00;
   --subheader-color: #000000;
   --text-color: #000000;
-  --list-color: #FF6600;
-  --quote-color: #FF6600;
+  --list-color: #FF6a00;
+  --quote-color: #FF6a00;
   --page-number-color: #CDCDCD;
   --tiny: 18px;
   --small: 22px;
@@ -120,7 +120,7 @@ section.large-text h1, section.large-text h2 { font-size: 46px !important; }
 /* Tabellen */
 table { font-size: var(--small); border: none; }
 th, td { padding: 7px 15px !important; }
-th { text-align: left; background-color: #FF6600; border: white 1px solid !important; color: white; }
+th { text-align: left; background-color: #FF6a00; border: white 1px solid !important; color: white; }
 td, tr { border: white 1px solid !important; }
 tr { color: black; background-color: white !important; }
 tr:nth-child(even) { background-color: #f0f0f0 !important; }
