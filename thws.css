@@ -1,5 +1,5 @@
 /* @theme thws */
-/*version: 1.0*/
+/*version: 1.1*/
 
 /* Standard-Marp-Stile importieren */
 @import "default";
@@ -19,11 +19,11 @@
   --background-color: #ffffff;
   --background-grey: #343A40;
   --background-teal: #005564;
-  --header-color: #FF6600; /* Orange für h1 */
+  --header-color: #FF66a0; /* Orange für h1 */
   --subheader-color: #000000; /* Schwarz für h2 */
   --text-color: #000000; /* Schwarz für Fließtext */
-  --list-color: #FF6600; /* Orange für Listenpunkte & Nummerierungen */
-  --quote-color: #FF6600; /* Orange für Zitate */
+  --list-color: #FF66a0; /* Orange für Listenpunkte & Nummerierungen */
+  --quote-color: #FF66a0; /* Orange für Zitate */
   --page-number-color: #CDCDCD; /* Orange für Foliennummern */
   --tiny: 18px;
   --small: 22px;
@@ -336,7 +336,7 @@ section.structural h2, section.structural p, section.structural h1, section.stru
 }
 
 section.structural h1 {
-  color: #FF6600;
+  color: #FF66a0;
   font-size: 32px;
 }
 
