@@ -1,18 +1,64 @@
 /* @theme thws-pr */
+/*version: 1.0*/
 
-@import "thws";
+@import "default";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* -------------------- ALLGEMEINE STRUKTUR -------------------------------*/
+:root {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  box-sizing: border-box;
 
-/* Standardmäßig ist jede Folie eine Inhaltsfolie */
-section {
-  background-color: var(--background-color);
-  position: relative;
-  width: 100%;
-  height: 100%;
+  --background-color: #ffffff;
+  --background-grey: #343A40;
+  --background-teal: #003366;
+  --header-color: #FF6600;
+  --subheader-color: #000000;
+  --text-color: #000000;
+  --list-color: #FF6600;
+  --quote-color: #FF6600;
+  --page-number-color: #CDCDCD;
+  --tiny: 18px;
+  --small: 22px;
+  --default: 24px;
+  --large: 28px;
 }
 
-/* LOGO OBEN LINKS */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: relative;
+}
+
+header {
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: left;
+  color: #CDCDCD !important;
+  justify-self: right;
+  width: fit-content;
+  right: 60px;
+  top: 50px;
+  display: none;
+}
+
+section {
+  padding-left: 100px;
+  background-color: var(--background-color);
+  position: relative;
+  height: 720px;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+section.center { padding-top: 100px; justify-content: center !important; }
+section.end { justify-content: end !important; }
+
+section > p, ul, ol, table, a { overflow: hidden; }
+
 section::before {
   content: "";
   background: url("https://raw.githubusercontent.com/MeanDeanFWI/thws/refs/heads/main/logos/thws-logo_horiz_en_orange-rgb.svg") no-repeat center;
@@ -25,22 +71,88 @@ section::before {
   height: 70px;
 }
 
-section h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  color: black;
-  width: 700px;
-}
-
-
-section h2 {
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  color: var(--subheader-color); /* Schwarz */
-  width: 700px;
-}
-
-section h1, section h2, section p, section h3, section ul, section ol {
+section h1, section h2, section p, section h3, section ul, section ol, section table, section pre {
   width: 100%;
 }
+
+h1 + p, h1 + ul, h1 + ol, h1 + table, h1 + pre, h1 + strong,
+h2 + p, h2 + ul, h2 + ol, h2 + table, h2 + pre, h2 + strong,
+h3 + p, h3 + ul, h3 + ol, h3 + table, h3 + pre, h3 + strong,
+h4 + p, h4 + ul, h4 + ol, h4 + table, h4 + pre, h4 + strong {
+  margin-top: 15px;
+}
+
+/* Überschriften */
+section h1 { font-size: 28px; font-weight: 700; color: black; line-height: 1 !important; }
+section h2 { font-size: 26px; font-weight: 500; color: var(--subheader-color); }
+section h3 { font-size: 24px; font-weight: 500; color: var(--header-color); }
+section h4 { font-size: var(--default); font-weight: 500; color: #6d6d6d; }
+section h5, section h6 { font-size: var(--tiny); font-weight: 300; }
+section h5 { color: var(--subheader-color); }
+section h6 { color: var(--header-color); }
+
+section h1 strong, section h2 strong, section h5 strong { font-weight: 700; color: var(--subheader-color); }
+section h3 strong, section h6 strong { font-weight: 700; color: var(--header-color); }
+section h4 strong { font-weight: 700; color: #6d6d6d; }
+
+section h1, section h2, section h3, section h4, section h5, section h6 {
+  margin: 3px 0 !important;
+}
+
+p {
+  font-weight: 300;
+  font-size: var(--default);
+  color: var(--text-color);
+  word-wrap: break-word;
+}
+
+section a {
+  color: var(--header-color);
+  text-decoration: underline;
+}
+
+/* Textgrößenklassen */
+section.tiny-text p, section.tiny-text ul li, section.tiny-text ol li, section.tiny-text a, section.tiny-text table { font-size: var(--tiny); }
+section.small-text p, section.small-text ul li, section.small-text ol li, section.small-text a { font-size: var(--small); }
+section.large-text p, section.large-text ul li, section.large-text ol li, section.large-text a { font-size: var(--large); }
+section.large-text h1, section.large-text h2 { font-size: 46px !important; }
+
+/* Tabellen */
+table { font-size: var(--small); border: none; }
+th, td { padding: 7px 15px !important; }
+th { text-align: left; background-color: #FF6600; border: white 1px solid !important; color: white; }
+td, tr { border: white 1px solid !important; }
+tr { color: black; background-color: white !important; }
+tr:nth-child(even) { background-color: #f0f0f0 !important; }
+
+/* Titelfolie */
+section.titlepage header { display:block; }
+section.titlepage {
+  text-align: left;
+  background-color: var(--background-teal);
+  justify-content: center;
+  padding-top: 50px;
+}
+section.titlepage h1 {
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--header-color);
+  width: 100%;
+}
+section.titlepage h2 {
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  line-height: 1.1;
+  width: 100%;
+}
+section.titlepage h4, section.titlepage h5, section.titlepage p, section.titlepage ul li, section.titlepage ol li {
+  color: white;
+}
+section.titlepage th { color: black; }
+section.titlepage tr { color: white; background-color: #1C2058 !important; }
+section.titlepage tr:nth-child(even) { background-color: #0e1030 !important; }
+
+/* Weitere Layouts und Stile bleiben unverändert (z. B. fullscreen, structural, img-right usw.) */
+
