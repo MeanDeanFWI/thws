@@ -1,6 +1,124 @@
-# MARP CI CSS Experiment Repository
+# 🧑‍🏫 THWS Online CSS – Marp Custom Theme
 
-Dieses Repository dient dazu, CSS-Dateien für ein konsistentes Corporate Design (CI) in [MARP](https://marp.app/) zu testen und zu entwickeln. MARP ist ein Markdown-basiertes Präsentationstool, das es ermöglicht, eigene Themes zu verwenden.
+Willkommen zum **Custom Marp Theme "thws-online.css"**, speziell entwickelt für Präsentationen im Stil der Technischen Hochschule Würzburg-Schweinfurt.
+
+## 🌟 Überblick
+
+Dieses Theme basiert auf dem Standard-Marp-Design, erweitert durch individuelle Farben, Layouts und Textstile. Es integriert das moderne Schriftbild der **Inter**-Fontfamilie und ist auf Lesbarkeit, Konsistenz und einfache Anwendung optimiert.
+
+---
+
+## 🎨 Klassenübersicht
+
+| Klasse              | Beschreibung                                                                 |
+|---------------------|-------------------------------------------------------------------------------|
+| `.titlepage`        | Titelfolie mit dunklem Hintergrund, großem Titel (h1) und Untertitel (h2)     |
+| `.structural`       | Inhaltsfolie mit grauem Hintergrund, hellem Text                             |
+| `.fullscreen`       | Vollbildbild mit Text-Overlay (z. B. Zitat, Beschreibung)                     |
+| `.img-right`        | Bild rechts neben dem Text (Text links, Bild rechts)                          |
+| `.center`           | Zentriert Inhalte vertikal in der Mitte der Folie                            |
+| `.end`              | Inhalte am unteren Rand der Folie ausgerichtet                               |
+| `.tiny-text`        | Reduziert die Textgröße für Text, Listen, Links und Tabellen auf 18px        |
+| `.small-text`       | Reduziert die Textgröße auf 22px                                             |
+| `.large-text`       | Erhöht die Textgröße auf 28px (auch Überschriften auf 46px)                  |
+
+---
+
+## 🔠 Text & Überschriften
+
+| HTML-Tag  | Größe     | Gewicht   | Farbe        |
+|-----------|-----------|-----------|--------------|
+| `h1`      | 28px      | 700       | schwarz      |
+| `h2`      | 26px      | 500       | schwarz      |
+| `h3`      | 24px      | 500       | orange       |
+| `h4`      | 24px      | 500       | grau (#6d6d6d)|
+| `h5`      | 18px      | 300       | schwarz      |
+| `h6`      | 18px      | 300       | orange       |
+| `p`       | 24px      | 300       | schwarz      |
+
+**Hinweis**: `<strong>` innerhalb von Überschriften verstärkt zusätzlich die Farbe und das Gewicht.
+
+---
+
+## 📊 Tabellenformatierung
+
+- Tabellen nutzen standardmäßig die Schriftgröße `--small` (22px)
+- Tabellenkopf (`<th>`) ist **weiß auf orange**
+- Zeilenhintergründe alternieren (weiß / hellgrau)
+- Rahmenfarbe: **weiß**
+
+### 📝 Tabellen-Textgröße anpassen
+
+Um die Schriftgröße für Tabellen in MARP zu verändern, nutze die Klassen:
+
+```markdown
+<!-- Tabelle mit kleinerer Schrift -->
+<section class="tiny-text">
+  | Spalte 1 | Spalte 2 |
+  |----------|----------|
+  | Inhalt   | Inhalt   |
+</section>
+```
+
+---
+
+## 📄 Fließtextgröße ändern
+
+Verwende eine der folgenden Klassen im `<section>`-Tag:
+
+- `.tiny-text` → 18px
+- `.small-text` → 22px
+- `.large-text` → 28px
+
+Beispiel:
+
+```markdown
+<section class="large-text">
+  # Große Überschrift
+  - Punkt 1
+  - Punkt 2
+</section>
+```
+
+---
+
+## 💬 Zitate
+
+```markdown
+> Dies ist ein wichtiges Zitat.
+```
+
+Zitate werden **orange**, fett und in 32px dargestellt.
+
+---
+
+## 📌 Logo und Seitennummerierung
+
+- Jede Folie zeigt automatisch das **THWS-Logo** oben links
+- Die **Seitennummer** erscheint unten rechts in hellgrau (`#CDCDCD`)
+
+---
+
+## 🛠️ Verwendung
+
+1. CSS-Datei in deinem Marp-Projekt einbinden:
+```yaml
+---
+marp: true
+theme: thws-online
+---
+```
+
+2. Folienklassen nutzen mit `<section class="...">` oder HTML-Kommentaren in Markdown:
+
+```markdown
+<!-- _class: titlepage -->
+# Meine Präsentation
+## Untertitel
+```
+
+---
+
 
 ## Anleitung zur Installation eines Custom Themes in MARP für VS Code
 
@@ -20,55 +138,4 @@ Dieses Repository dient dazu, CSS-Dateien für ein konsistentes Corporate Design
        ]
      }
      ```
-
-4. **Theme in einer MARP-Datei nutzen**
-   - In der jeweiligen Markdown-Datei mit MARP kannst du das Theme wie folgt aktivieren:
-
-     ```yaml
-     ---
-     theme: '<THEME-FILE>'
-     ---
-     ```
-
-5. **Vorschau aktivieren**
-   - Öffne die MARP-Datei in VS Code und nutze die Vorschau (`Strg + Shift + V` oder `Cmd + Shift + V` auf macOS), um dein Theme zu testen.
-  
-6. **Hinweise**
-
-Der Header **MUSS IMMER** ausgefüllt sein, und ist wie folgt aufgebaut:  
-&lt; **Name des Moduls** <br> Name des Kapitels &gt;  
-
-&lt; **Erklärung:** Den Modulnamen immer **fett** schreiben mit `**`; danach immer einen Zeilenumbruch mit `<br>` setzen. &gt;  
-
-7. **Verfügbare Theme**
-
-Für online Vorlesungen kann das Theme **"thws.css"** verwendet werden, hier ist die Folienbreite auf 70% reduziert,, um Platz für den Spreche zu bieten.
-
-Normale Vorlesungen können mit dem **Theme "thws-pr.css"** gestaltet werden, hier sind die Folien auf 100% Breite ausgelegt.
-
----
-
-### AUSSERDEM:  
-Bitte allgemein in den Slides auf **sinnvolle und schöne** (nicht nur ein Wort in einer Zeile) Zeilenumbrüche achten.  
-&lt; Die Umbrüche kann man mit `<br>` selbst bestimmen. &gt;
-__________________
-
-Wie verwendet man Markdown? Hier sind alle styles erklärt:
-https://www.markdownguide.org/cheat-sheet/
-
-  
-7. **Folientypen**
-
-   Folgende Arten von Folien können verwendet werden:
-
-| **Sektion**            | **MARP-Klassenbefehl**          |
-|------------------------|--------------------------------|
-| Allgemeine Inhaltsfolie | &lt;!-- class: default --&gt;    |
-| Titelseite             | &lt;!-- class: titlepage --&gt;  |
-| Lernziele              | &lt;!-- class: lernziele --&gt;  |
-| Diskussion             | &lt;!-- class: diskussion --&gt; |
-| Zusammenfassung        | &lt;!-- class: summary --&gt;    |
-| Zitat-Bereich         | &lt;!-- class: quote --&gt;      |
-| Grafik-Bereich        | &lt;!-- class: grafik --&gt;     |
-| Vollbild-Grafik       | &lt;!-- class: vollbild --&gt;   |
-| Tabellen              | &lt;!-- class: table --&gt;      |
+Mit 💛 gestaltet für akademische Exzellenz – Präsentieren auf THWS-Niveau!
