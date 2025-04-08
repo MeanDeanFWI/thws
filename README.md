@@ -1,6 +1,6 @@
 # 🧑‍🏫 THWS Online CSS – Marp Custom Theme
 
-Willkommen zum **Custom Marp Theme "thws-online.css"**, speziell entwickelt für Präsentationen im Stil der Technischen Hochschule Würzburg-Schweinfurt.
+Willkommen zum **Custom Marp Theme "thws.css"**, speziell entwickelt für Präsentationen im Stil der Technischen Hochschule Würzburg-Schweinfurt.
 
 ## 🌟 Überblick
 
@@ -105,7 +105,7 @@ Zitate werden **orange**, fett und in 32px dargestellt.
 ```yaml
 ---
 marp: true
-theme: thws-online
+theme: thws
 ---
 ```
 
