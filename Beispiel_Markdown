@@ -1,132 +1,354 @@
 ---
 marp: true
-theme: thws
+theme: thws-online
 paginate: true
-header: '**Strategies and technologies for climate change Mitigation** <br> Impairment Test nach IAS 36'
-
+header: '**This is the name of the module** <br> THWS online study programn - presentations with MARP'
+math: mathjax
 ---
-
-<!-- 
-Der Header MUSS IMMER ausgefüllt sein, und ist wie folgt aufgebaut:
-**Name des Moduls** <br> Name des Kapitels
-
-Erklärung: Den Modulnamen immer Fett schreiben mit **; danach immer einen Zeilenumbruch mit <br> setzen.
-
-___________________
-
-AUSSERDEM: Bitte allgemein in den Slides auf sinnvolle und schöne (nicht nur ein Wort in einer Zeile) Zeilenumbrüch achten.
-Die Umbrüche kann man mit <br> selbst bestimmen. 
-
-__________________
-
-Wie verwendet man Markdown? Hier sind alle styles erklärt:
-https://www.markdownguide.org/cheat-sheet/
-
--->
 
 <!-- _class: titlepage -->
 
-# Impairment Test <br> nach IAS 36
-## Beurteilung der Werthaltigkeit <br> von Vermögenswerten
+# Showcase <br>presentation      
+## for designing course presentations <br>with Markdown & MARP <br>
+
+###### (It can be so easy)
 
 ---
 
-<!-- _class: lernziele -->
+<!-- _class: structural center large-text-->
 
-# Lernziele
-- Definition und Zweck des Impairment Tests
-- Anwendungsbereich∞ von IAS 36
-- Ablauf der Werthaltigkeitsprüfung
-- Ermittlung des erzielbaren Betrags
-- Behandlung von Wertminderungen
-- Praxisbeispiele zur Veranschaulichung
+# Content types
+#### Headings, Text, Lists, etc.
 
 ---
 
-# Einführung in IAS 36
-- Ziel: Sicherstellung, dass Vermögenswerte nicht über ihrem erzielbaren Betrag bilanziert werden
-- Gilt für Sachanlagen, immaterielle Vermögenswerte und Geschäfts- oder Firmenwerte
-- Nicht anwendbar auf Vorräte, latente Steuern, Finanzinstrumente (separate Standards)
+# 1 Text types
+
+This is normal text in *cursive* and **bold**
+
+You can use heading to structure your slides:
+
+# This is a H1 in *cursive* and **bold**
+## This is a H2 in *cursive* and **bold**
+### This is a H3 in *cursive* and **bold**
+#### This is a H4 in *cursive* and **bold**
+
+
+<br> H5 and H6 are used mainly for image captions
+
+##### This is a H5 in *cursive* and **bold**
+###### This is a H6 in *cursive* and **bold**
+---
+
+# 1 Text Types
+### in Markdown language:
+
+```
+This is normal text in *cursive* and **bold**
+
+# This is a H1 in *cursive* and **bold**
+## This is a H2 in *cursive* and **bold**
+### This is a H3 in *cursive* and **bold**
+#### This is a H4 in *cursive* and **bold**
+##### This is a H5 in *cursive* and **bold**
+###### This is a H6 in *cursive* and **bold**
+
+This is how you do an empty line: <br><br>
+
+```
 
 ---
 
-<!-- _class: quote -->
+# <!-- fit --> Attention, <br> please
 
->»Abgeschieden wohnen sie in Buchstabhausen an der Küste <br> des Semantik, eines großen Sprachozeans.«
+### you can fit headlines to grab the attention of your students<br><br>
+#### How to do that with Markdown:
 
-## Max Mustermann, 2025
+```
+# <!-- fit --> Attention, <br> please
+```
 
----
-
-<!-- _class: grafik -->
-
-# Grafik mit Überschrift
-
-![Image](img/grafik-beispiel.jpg)
-
-### **Das ist die Bildunterschrift** <br> © Das ist das Copyright
 
 ---
 
-<!-- _class: vollbild -->
+# 2 Lists
 
-![Image](img/beispielbild.jpg)
+You can do Bullet Point Lists:
+- List
+- List
+  - another Point
 
-### **Das ist die Bildunterschrift** <br> © Das ist das Copyright
+You can also do numbered Lists:
+1. List Point
+    1.1. another point
+2. Point
+
 ---
 
-## Das ist eine Tabelle
+# 2 Lists
+### in Markdown language:
+
+```
+You can do Bullet Point Lists:
+- List
+- List
+  - another Point
+
+You can also do numbered Lists:
+1. List Point
+    1.1. another point
+2. Point
+
+```
+
+---
+
+
+# 3 Quotes
+
+> »Abgeschieden wohnen sie in Buchstabhausen an der Küste <br> des Semantik, eines großen Sprachozeans.«
+
+<br><br>
+#### How to do that with Markdown:
+
+```
+> »Abgeschieden wohnen sie in Buchstabhausen an der Küste <br> 
+des Semantik, eines großen Sprachozeans.«
+```
+
+---
+
+# 4 Tables 
+
 
 | ID | Syntax | Description | Another Category |
 | --- | --- | --- | --- |
 | 1 | Header | Title | Value Number 1|
 | 2 | Paragraph | Text | Second Value |
 | 3 | Quote | Text |  Value 3 |
-| 4 | Link | URL | 4th Value |
+
+
+#### <br> How to do that with Markdown:
+
+``` 
+| ID | Syntax | Description | Another Category |                       
+| --- | --- | --- | --- |
+| 1 | Header | Title | Value Number 1|
+| 2 | Paragraph | Text | Second Value |
+| 3 | Quote | Text |  Value 3 |
+```
 
 ---
 
-# Anwendungsbereich
-- Betrifft materielle und immaterielle Vermögenswerte
-- Gilt insbesondere für:
-  - Sachanlagen nach IAS 16
-  - Immaterielle Vermögenswerte nach IAS 38
-  - Geschäfts- oder Firmenwerte nach IFRS 3
-- Ausschluss von Finanzinstrumenten (IFRS 9) und biologischen Vermögenswerten (IAS 41)
+# 5 Images 
+
+![Image](img/grafik-beispiel.jpg)
+
+###### **This is the image caption** <br> © This is the Copyright
 
 ---
 
-# Erzielbarer Betrag
-- Höherer Wert aus:
-  1. **Fair Value abzüglich Verkaufskosten**
-  2. **Nutzungswert** (Value in Use)
-- Fair Value: Marktbasierte Bewertung
-- Nutzungswert: Barwert der erwarteten zukünftigen Cashflows
+# 5 Images 
+### in Markdown language:
+
+``` 
+![Image](img/grafik-beispiel.jpg)
+
+###### **This is the image caption** <br> © This is the Copyright
+```
+
+---
+
+# 6 Other content types
+
+**Links:**
+[I'm an inline-style link](https://www.google.com)
+
+**<br>Math:**
+$$ s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1} $$  
+
+**<br>Code snippets:**
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+---
+
+
+# 5 Other content types
+### in Markdown language:
+
+**Links:**
+``` 
+[I'm an inline-style link](https://www.google.com)                   
+```
+**Math:**
+```  
+$$ s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1} $$                              
+```
+
+**Code:**
+``` 
+```python
+s = "Python syntax highlighting"                                   
+print s```
+```
+
+---
+
+<!-- _class: structural center large-text-->
+
+# Classes
+#### for title pages, fullscreen images, text sizing etc.
 
 
 ---
 
-# Zusammenhang mit anderen IFRS-Standards
-- **IAS 16**: Neubewertungsmodell
-- **IAS 38**: Behandlung immaterieller Vermögenswerte
-- **IFRS 13**: Fair-Value-Bewertung
-- **IFRS 9**: Wertminderung von Finanzinstrumenten
+# What are classes
+
+Classes change the styling of elements to look a certain way
+You can apply these to slide by adding this code snippet before the slide content: 
+
+``` 
+<!-- _class: nameofclass -->
+```
+
+<bR> you can also add multiple classes like this:
+
+``` 
+<!-- _class: firstclass secondclass -->
+```
+
+---
+
+# Types of classes
+## Slide design
+| classname | What it does |              
+| --- | --- | 
+| **titlepage** | with petrol background and special headings; *only use this once* |
+| **structural** | for structural slides like intro, chapters, etc. |
+| **fullscreen** | renders fullscreen image with special caption styling |
+| **img_right** | renders image on the rights side with special caption styling |
+| **end** | aligns elements at the end of the slide |
+| **center** | aligns elements from the center of the slide |
+
+---
+
+# Types of classes
+## Element alignment
+At default all elements are aligned at the top of the slide. There may be use cases, when you want other options. <bR> Then you can use these classes:
+| classname | What it does |              
+| --- | --- | 
+| **end** | aligns elements at the end of the slide |
+| **center** | aligns elements from the center of the slide |
+
+---
+
+# Types of classes
+## Text sizing
+
+This is the default text size, but if you have content, which is a little longer you can change the text size by using these classes:
+
+| classname | What it does |              
+| --- | --- | 
+| **tiny-text** | changes font size of text, lists, links and tables, please avoid using this class regularly |
+| **small-text** | changes font size of text, lists, links |
+| **large-text** | changes font size of text, lists, links and H1 |
+
+---
+
+
+<!-- _class: structural center large-text-->
+
+# Examples
+#### use cases to copy
+
+---
+
+<!-- _class: titlepage center -->
+
+# The Title
+## titlepage with center class
+
+Only use this once in your presentation
+
 
 
 ---
-<!-- _class: summary -->
 
-# Summary
-- IAS 36 stellt sicher, dass Vermögenswerte nicht <br> überbewertet sind
-- Regelmäßige Prüfung erforderlich, insbesondere bei Indikatoren für Wertminderung
-- Ermittlung des erzielbaren Betrags als Kernprozess
-- Praxisbeispiele zeigen hohe Relevanz für Unternehmen
+<!-- _class: structural -->
+
+# This is a structure slide
+
+- you could structure and list your learning outcomes here
+- or you could use it for chapters
+- students will automatically notice that content changes when the see this type of slide <br> **so do not use it just to have a dark background**
+
+### <br><br>Only titlepages and strucure slides show the header with the module name and the unit title  
+
 
 ---
 
-<!-- _class: diskussion -->
+# Presentation content
 
-# Fragen & Diskussion
-- Welche Herausforderungen seht ihr bei der Anwendung <br> von IAS 36?
-- Welche Branchen sind besonders betroffen?
-- Welche Alternativen gäbe es zur aktuellen Regelung?
+This is a **content** slide. This is always white. 
+*Plese do not use the chapter slides for content*
+
+### Types of content you can put here:
+- text, lists etc.
+- images
+- tables
+- quotes
+- code snippets
+- mathematical expressions
+
+---
+
+<!-- _class: fullscreen -->
+
+![Image](img/beispielbild.jpg)
+
+
+##### When you use the class *fullscreen*, the image caption will automatically look like this. This is a H5. **Here could be a copyright**
+###### You could do another caption, if you want. This is a H6.
+---
+
+<!-- _class: img-right -->
+
+# Class *img-right*
+
+Here you could put text or lists,
+or tables
+
+**!! Please be aware the your avatar/your film you will overlap with the image**
+
+
+![img](img/beispielbild.jpg)
+
+###### **The image caption is placed here** <br> © Copyright
+
+---
+
+
+<!-- _class: end -->
+
+>»Abgeschieden wohnen sie in Buchstabhausen an der Küste <br> des Semantik, eines großen Sprachozeans.«
+
+## This is a quote with the end class. <bR>The quote will sit on the end of the slide.
+
+---
+
+<!-- _class: img-right small-text -->
+
+
+#### Case Study 1
+# img-right and small-text
+
+Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. <br> It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. 
+
+![img](img/beispielbild2.jpg) 
+
+##### This is the caption © Copyright
+
+
